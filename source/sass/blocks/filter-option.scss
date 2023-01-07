@@ -1,0 +1,82 @@
+.filter-option__label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -45px;
+    top: -4px;
+    border: 1px solid $special_grey;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: -65px;
+      top: -5px;
+    }
+  }
+}
+
+.filter-option__input:checked + .filter-option__label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -36px;
+  width: 14px;
+  height: 14px;
+  background-color: $basic_green;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    top: 7px;
+    left: -53px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.filter-option__input:hover + .filter-option__label::before,
+.filter-option__input:checked + .filter-option__label::before {
+  border: 1px solid $special_light-grey-2;
+}
+
+.filter-option__input:hover + .filter-option__label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -36px;
+  width: 14px;
+  height: 14px;
+  background-color: $basic_green;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    top: 7px;
+    left: -53px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.filter-option__input:disabled + .filter-option__label::before {
+  opacity: 0.45;
+  border: 1px solid $special_dark-grey;
+}
+
+.filter-option__input:disabled + .filter-option__label {
+  opacity: 0.3;
+  cursor: initial;
+}
+
+.filter-option__input:hover:disabled + .filter-option__label::before {
+  opacity: 0.45;
+  border: 1px solid $special_dark-grey;
+}
+
+.filter-option__input:hover:disabled + .filter-option__label::after {
+  background-color: transparent;
+}

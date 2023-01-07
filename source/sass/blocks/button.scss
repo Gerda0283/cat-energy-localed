@@ -1,0 +1,80 @@
+.button {
+  display: block;
+  @include link-style;
+  @include call-to-action-btn;
+  cursor: pointer;
+
+}
+
+.button--more-product {
+  order: 3;
+  @include reset-btn;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special_dark-grey;
+  background-color: $basic-light-grey-3;
+
+  @media (max-width: 349px) {
+    margin-top: 21px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: 350px) {
+    margin-top: 85px;
+  }
+
+  @media (min-width: 700px) {
+    line-height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $special_dark-grey;
+    background-color: $special_dark-grey-3;
+  }
+
+  &:active {
+    color: $basic_black-alfa-3;
+    background-color: $special_dark-grey-3;
+  }
+}
+
+.button--visible-xs-theme {
+  width: 250px;
+
+  @media (min-width: 350px) {
+    width: 83%;
+  }
+
+  @media (max-width: $sm-tablet-width) {
+    position: relative;
+    order: 4;
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 3;
+  }
+
+  @media (min-width: 521px) {
+    display: none;
+  }
+}
+
+
+
+.button--btn-container-theme {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+
+  @media (max-width: $sm-tablet-width) {
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+    margin-right: 0;
+    margin: 0 auto;
+  }
+}

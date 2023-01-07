@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="page page--inner" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Project, Graduate" />
+    <meta name="description" content="Online Store of Cats' Functional Nutrition" />
+    <title>HTML Academy: Cat Energy</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icons/icon_180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body class="page-body page-body--inner-form">
+
+    <header class="main-header main-header--inner">
+      <div class="container container--menu-wrapper">
+        <div class="cell cell--logo-theme cell--logo-theme-inner">
+          <a class="main-header__logo logo-img logo-img--inner-page-theme" href="index.html">
+            <picture>
+              <source media="(min-width: 993px)" srcset="img/logo_cat-energy-img_md.svg">
+              <source media="(min-width: 521px)" srcset="img/logo_cat-energy-img_sm.svg">
+              <img width="191" height="38" src="img/logo_cat-energy-img_xs.svg" alt="Logo Cat Energy" >
+            </picture>
+          </a>
+        </div>
+        <div class="cell cell--menu-theme cell--menu-theme-inner">
+          <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__button toggle" type="button">
+              <span class="visually-hidden">Opens menu</span>
+            </button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list menu-list menu-list--inner">
+                <li class="menu-list__item">
+                  <a href="index.html">Home page</a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="catalog.html">Products</a>
+                </li>
+                <li class="menu-list__item menu-list__item--сurrent">
+                  <a>Get the program</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="program-main">
+      <div class="container container--program-main">
+          <div class="cell cell--inner-first">
+            <h1 class="main-headline main-headline--inner-headline-theme">Apply for a program</h1>
+            <p>Please fill in a questionnaire, and we will pick up<br /> nutrition program for your cat</p>
+          </div>
+      </div>
+      <form class="program-form" method="POST" action="https://echo.htmlacademy.ru">
+        <fieldset class="program-form__field program-field">
+          <h2 class="visually-hidden">Data for order obtaining</h2>
+          <div class="container container--program-field-theme container--program-field-theme-first">
+            <div class="cell cell--base-info-list-theme">
+              <ul class="base-info-list">
+                <li class="base-info-list__item base-info">
+                  <label class="base-info-list__label" for="name">Name:*</label>
+                  <input class="base-info-list__input base-info__first" type="text" name="name" id="name" placeholder="Your Cat Name" required />
+                </li>
+                <li class="base-info-list__item base-info">
+                  <label class="base-info-list__label" for="weight">Weight (kg):*</label>
+                  <input class="base-info-list__input base-info__second" type="text" name="weight" id="weight" placeholder="Your Cat Weight" required />
+                </li>
+                <li class="base-info-list__item base-info">
+                  <label class="base-info-list__label" for="age">Age (years):</label>
+                  <input class="base-info-list__input base-info__third" type="text" name="age" id="age" placeholder="Your Cat Age" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="program-form__field program-field">
+          <h2 class="visually-hidden">Data for diet choice</h2>
+          <div class="container container--program-field-theme container--program-field-theme-second">
+            <div class="cell cell--program-field-radio-theme">
+              <ul class="filter-info">
+                <li class="filter-option filter-info__item">
+                  <input class="filter-option__input radio-input visually-hidden" type="radio" name="diet" value="weight-loss" id="weight-loss" checked  />
+                  <label class="filter-option__label" for="weight-loss">Weight loss</label>
+                </li>
+                <li class="filter-option filter-info__item">
+                  <input class="filter-option__input radio-input visually-hidden" type="radio" name="diet" value="weight-gain" id="weight-gain" disabled />
+                  <label class="filter-option__label" for="weight-gain">Weight gain</label>
+                </li>
+                <li class="filter-option filter-info__item">
+                  <input class="filter-option__input radio-input visually-hidden" type="radio" name="diet" value="need-help" id="need-help" />
+                  <label class="filter-option__label" for="need-help">Have no idea (need your help)</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="program-form__field program-field">
+          <hr class="program-field__hr">
+          <h2 class="program-field__legend section-headline">Cat owner contact information</h2>
+          <div class="container container--program-field-theme">
+            <div class="cell cell--contact-info-theme">
+              <ul class="contact-info">
+                <li class="contact-info__item contact-info__item--email">
+                  <label class="contact-info__label" for="email">E-mail:*</label>
+                  <input class="contact-info__input" type="email" name="email" id="email" placeholder="catowner@gmail.com" required />
+                  <svg class="contact-info__svg" width="20" height="15">
+                    <use xlink:href="img/sprite.svg#mail"></use>
+                  </svg>
+                </li>
+                <li class="contact-info__item contact-info__item--tel">
+                  <label class="contact-info__label" for="phone-number">Phone:*</label>
+                  <input class="contact-info__input contact-info__input--error" type="tel" name="phone-number" id="phone-number" placeholder="0479 42-15-79" required />
+                  <svg class="contact-info__svg" width="20" height="21">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="program-field__hr">
+          <h2 class="program-field__legend section-headline program-field__legend--headline-second">Comment</h2>
+          <div class="container container--program-field-theme">
+            <div class="cell">
+              <label class="visually-hidden" for="comment">Habits of your cat</label>
+              <textarea class="comment-info"  id="comment" rows="6" id="message" name="message" placeholder="Please tell about whole habits of your cat"></textarea>
+            </div>
+          </div>
+          <hr class="program-field__hr">
+          <h2 class="program-field__legend section-headline program-field__legend--headline-third">Optional</h2>
+          <div class="container container--program-field-theme">
+            <div class="cell">
+              <ul class="additional-list">
+                <li class="additional-list__item component">
+                  <input class="component__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked disabled />
+                  <label class="component__label" for="sweetener">Sugar substitute</label>
+                </li>
+                <li class="additional-list__item component">
+                  <input class="component__input visually-hidden" type="checkbox" name="water" id="water" value="water" disabled />
+                  <label class="component__label" for="water">Drinkingwater</label>
+                </li>
+                <li class="additional-list__item component">
+                  <input class="component__input visually-hidden" type="checkbox" name="milk" id="milk" value="milk" />
+                  <label class="component__label" for="milk">Milk</label>
+                </li>
+                <li class="additional-list__item component">
+                  <input class="component__input visually-hidden" type="checkbox" name="vitamins" id="vitamins" value="vitamins" />
+                  <label class="component__label" for="vitamins">vitamins</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <div class="container container--submit-form-theme">
+          <div class="cell submit-form">
+            <button class="submit-form__button button" type="submit">Apply</button>
+          </div>
+          <div class="cell required-sign">
+            <p>* — required inputs</p>
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__contacts">
+        <div class="container container--address-card-theme container--address-card-inner">
+          <div class="cell address-card cell--address-card">
+            <h3 class="division-headline division-headline--address-card-theme">We are opened <br />for cooperation!</h3>
+            <p class="address-card__text">
+              Somewhere <span class="address-card__last-line">in a world</span>
+            </p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38909143.43194762!2d-105.59652420706882!3d53.47157599399898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b0f512d2a60285%3A0x4583da572c3ea508!2sPonca%20City%2C%20OK%2C%20USA!5e0!3m2!1sen!2sbe!4v1672677558321!5m2!1sen!2sbe" width="303" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+        <div class="container container--main-footer-theme">
+          <div class="cell main-footer-logo">
+            <a class="main-footer-logo__logo-text" href="index.html">
+              <img src="img/logo_cat-energy_footer.svg" width="128" height="24" alt="Logo Cat Energy">
+            </a>
+          </div>
+          <div class="cell cell--social-theme">
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-link social-link--facebook" href="https://www.facebook.com/Gerda283">
+                  <span class="visually-hidden">Daria Germash Facebook page</span>
+                  <svg width="10" height="16">
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="cell copyright">
+            <a class="copyright__link">HTML Academy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

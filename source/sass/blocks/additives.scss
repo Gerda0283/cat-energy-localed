@@ -1,0 +1,40 @@
+.additives {
+
+  @media (min-width: $sm-desktop-width) {
+    padding-right: 40px;
+  }
+
+  @media (min-width: $xl-width) {
+    padding-right: 0;
+  }
+}
+
+.additives__data {
+  min-width: 100%;
+  padding-bottom: 31px;
+
+  @media (min-width: 350px) {
+    min-width: 310px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 700px) {
+    min-width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.additives__characteristics {
+  display: grid;
+
+  @media (min-width: $sm-desktop-width) {
+    row-gap: 0;
+  }
+}

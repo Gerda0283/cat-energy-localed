@@ -1,0 +1,149 @@
+.division-headline {
+  @include margin-h-reset;
+  @include font-family-headline;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $basic_black;
+}
+
+.division-headline--product-type {
+
+  grid-area: 1/2;
+  margin-top: 30px;
+  margin-left: -8px;
+  /*margin-bottom: 29px;*/
+  margin-bottom: 26px;
+  text-align: left;
+
+  @media (min-width: 321px) and  (max-width: $sm-tablet-width) {
+    grid-area: 1/2;
+    width: 90%;
+  }
+
+  @media (min-width: 521px) and (max-width: $mobile-width-only) {
+    grid-area: 1/2 span;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: 700px) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: 1/1;
+    margin-top: 69px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+    grid-area: 1/2;
+    width: 100%;
+    margin-bottom: 53px;
+    font-size: 30px;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 76px;
+    margin-left: -12px;
+    margin-bottom: 73px;
+  }
+}
+
+.division-headline--address-card-theme {
+  width: 200px;
+  @include margin-h-reset;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: 321px) and (max-width: $mobile-width-only) {
+    width: 200px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @media (min-width: 1100px) {
+    width: 200px;
+  }
+}
+
+.division-headline--product-name {
+  @include margin-h-reset;
+
+  a {
+    @include link-style;
+    color: $basic_black-2;
+  }
+
+  @media (max-width: 349px) {
+    width: 94px;
+    margin-top: 2px;
+    margin-bottom: 13px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  @media (min-width: 350px) {
+    width: 140px;
+    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 349px) {
+
+  .division-headline--product-name-first {
+    margin-top: 43px;
+    margin-bottom: 12px;
+  }
+}
+
+.division-headline--more-cards-theme {
+  width: auto;
+  text-align: center;
+  padding-bottom: 8px;
+
+  @media (max-width: 349px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 350px) {
+    width: 170px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+.division-headline--add-component-theme {
+  @include margin-h-reset;
+
+  @media (max-width: $sm-tablet-width) {
+    padding-top: 12px;
+    padding-bottom: 9px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: 521px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

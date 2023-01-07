@@ -1,0 +1,73 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  @media (max-width: 699px) {
+    min-height: 78px;
+  }
+
+  @media (min-width: 800px) {
+    padding-left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.copyright__link {
+  position: relative;
+  width: 100%;
+  align-self: center;
+  @include link-style;
+  color: $special_dark-grey-2;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 32px;
+  }
+
+  @media (min-width: 820px) {
+    display: flex;
+    width: 163px;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 34px;
+    top: -6px;
+    right: 0;
+    align-self: center;
+    background-image: url(../img/icons/htmlacademy.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: $tablet-width) {
+      right: 0;
+      left: 168px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: auto;
+    }
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-image: url(../img/icons/htmlacademy_hover.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:active::before {
+    background-image: url(../img/icons/htmlacademy.svg);
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

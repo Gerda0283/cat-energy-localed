@@ -1,0 +1,113 @@
+.more-cards {
+  align-self: center;
+
+  @media (min-width: 350px) {
+    margin-top: -10px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.more-cards__item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  @media (min-width: 350px) {
+    min-height: 408px;
+    padding: 10px 32px 10px 39px;
+    border: 2px solid $basic-light-grey-3;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+    min-height: 300px;
+    padding: 5px 30px 34px 38px;
+    align-self: flex-end;
+  }
+}
+
+.more-cards__caption {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 350px) {
+    width: 230px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+    width: 100%;
+  }
+
+  p {
+    @include margin-h-reset;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    @media (min-width: 350px) {
+      width: 170px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+.more-cards__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  order: 1;
+  @include reset-btn;
+
+  @media (max-width: 349px) {
+    margin-top: 30px;
+    margin-bottom: 29px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $special_grey;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    background-color: $basic_green;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $special_grey;
+    opacity: 0.3;
+  }
+
+  @media (min-width: 350px) {
+    margin-top: 63px;
+    margin-bottom: 67px;
+
+    &::before,
+    &::after {
+      width: 60px;
+    }
+  }
+}

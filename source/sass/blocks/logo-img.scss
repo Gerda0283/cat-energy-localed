@@ -1,0 +1,52 @@
+
+.logo-img {
+  position: relative;
+  z-index: 3;
+
+  @media (min-width: $mobile-width-only) {
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img {
+
+    @media (min-width: $tablet-width) {
+      width: 174px;
+      height: 52px;
+      margin-top: -16px;
+    }
+
+    @media (min-width: $sm-desktop-width) {
+      width: 202px;
+      height: 59px;
+      margin-top: 0;
+    }
+
+    @media (min-width: $xl-width) {
+      margin-top: -5px;
+      margin-left: -9px;
+    }
+  }
+}
+
+.logo-img--inner-page-theme {
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+
+    img {
+      margin-top: -3px;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@mixin padding-hor-reset {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin padding-min {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin padding-s {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@mixin padding-sm {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin padding-md {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@mixin padding-l {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@mixin padding-m-l {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@mixin padding-l-lg {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@mixin padding-lg {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@mixin padding-extra {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+@mixin margin-h-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin centration {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+@mixin link-style {
+  color: $basic_black;
+  text-decoration: none;
+  outline: transparent;
+}
+
+@mixin font-family-headline {
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+@mixin call-to-action-btn {
+  max-width: 100%;
+  /*padding: 8px 10px;*/
+  padding: 10px 14px;
+  font-family: "Oswald", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic_white;
+  background-color: $basic_green;
+  border: none;
+  white-space: pre-wrap;
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:focus,
+  &:active {
+    color: $basic_white-alfa;
+    background-color: $basic_green-2;
+  }
+}
+
+@mixin tablet-width-btn {
+  padding: 17px 26px;
+}

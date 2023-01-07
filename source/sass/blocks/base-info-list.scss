@@ -1,0 +1,118 @@
+.base-info-list {
+
+  @include reset-list;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+
+    padding-top: 50px;
+  }
+}
+
+.base-info-list__item {
+  display: grid;
+  margin-bottom: 13px;
+  justify-content: space-between;
+  align-items: center;
+  @include font-family-headline;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $xl-width) {
+    width: 569px;
+  }
+
+  &:nth-child(1) {
+    grid-template-columns: 15% 80%;
+
+    @media (min-width: $sm-tablet-width) {
+      grid-template-columns: 10% 88%;
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: 10% 89%;
+    }
+
+    @media (min-width: $sm-desktop-width) {
+      grid-template-columns: 10% 85%;
+    }
+  }
+
+  &:nth-child(2) {
+    grid-template-columns: 25% 72%;
+
+    @media (min-width: $sm-tablet-width) {
+      grid-template-columns: 17% 83%;
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: 15% 85%;
+    }
+
+    @media (min-width: $sm-desktop-width) {
+      grid-template-columns: 18% 79%;
+    }
+  }
+
+  &:nth-child(3) {
+    grid-template-columns: 38% 60%;
+    margin-bottom: 0;
+
+    @media (min-width: $sm-tablet-width) {
+      grid-template-columns: 23% 76%;
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: 20% 78%;
+    }
+
+    @media (min-width: $sm-desktop-width) {
+      grid-template-columns: 28% 69%;
+    }
+  }
+}
+
+.base-info-list__input {
+  max-width: 100%;
+  padding: 13px;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 1px solid $special_light-grey;
+  outline: $basic-transparent;
+
+  &:valid:required {
+    border: 1px solid $special_light-grey;
+  }
+
+  &:hover {
+    border: 1px solid $special_grey;
+  }
+
+  &:focus {
+    border: 1px solid $special_dark-grey;
+    outline: $basic-transparent;
+  }
+
+  &:focus-visible {
+    outline: $basic-transparent;
+  }
+
+  &:invalid:required {
+    box-shadow: none;
+  }
+
+  &:focus:invalid,
+  &:not(:placeholder-shown):invalid {
+    border-color: $basic-red;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+  }
+}
